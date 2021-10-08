@@ -8,7 +8,7 @@ metadata:
     test: test
   annotations:
     fluxcd.io/automated: "true"
-    fluxcd.io/tag.example-app: "semver: >=1.0.1, <1.0.9"
+    fluxcd.io/tag.example-app: "semver:~1.0
     
 spec:
   selector:
