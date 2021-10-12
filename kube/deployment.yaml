@@ -2,18 +2,18 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: fluxdemo
+  name: example-deploy
   labels:
-    app: fluxdemo
+    app: example-app
     test: test
   annotations:
     fluxcd.io/automated: "true"
-    fluxcd.io/tag.fluxdemo: "semver:~1.0
+    fluxcd.io/tag.example-app: "semver:~1.0
     
 spec:
   selector:
     matchLabels:
-      app: fluxdemo
+      app: example-app
   replicas: 2
   strategy:
     type: RollingUpdate
@@ -23,10 +23,10 @@ spec:
   template:
     metadata:
       labels:
-        app: fluxdemo
+        app: example-app
     spec:
       containers:
-      - name: fluxdemo
+      - name: example-app
         image: chandu054/fluxcd-demo:1.0.1
         imagePullPolicy: Always
         ports:
