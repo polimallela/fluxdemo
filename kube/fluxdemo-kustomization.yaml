@@ -5,10 +5,10 @@ metadata:
   name: fluxdemo
   namespace: default
 spec:
-  interval: 1m0s
+  interval: 5m0s
   path: ./kube
   prune: true
   sourceRef:
     kind: GitRepository
-    name: fluxdemo
+    name: podinfo
 
